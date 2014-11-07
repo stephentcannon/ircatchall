@@ -1,0 +1,19 @@
+<template name="layout">
+  <div id="wrapper">
+    <span class="noprint">
+      {{> yield region='navbars'}}
+    </span>
+    {{#if currentUser}}
+      <div id="page-wrapper">
+        <div class="row">
+        
+          {{> yield}}
+        </div>
+      </div>
+    {{else}}
+      <!-- div class="row" -->
+      {{> yield}}
+      <!-- /div -->
+    {{/if}}
+  </div>
+</template>
